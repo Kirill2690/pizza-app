@@ -1,7 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
-import {getCartFromLS} from '../../../../../Downloads/pizza-app-master/src/utils/getCartFromLS';
-import {calcTotalPrice} from '../../../../../Downloads/pizza-app-master/src/utils/calcTotalPrice';
+
 import {CartItem, CartSliceState} from './types';
+import {getCartFromLS} from "../../utils/getCartFromLS";
+import {calcTotalPrice} from "../../utils/calcTotalPrice";
 
 const initialState: CartSliceState = getCartFromLS()
 

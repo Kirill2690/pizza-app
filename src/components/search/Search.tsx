@@ -1,8 +1,9 @@
 import React from 'react';
 import debounce from 'lodash.debounce';
-import styles from './Search.module.scss';
-import {useAppDispatch} from '../../../../../Downloads/pizza-app-master/src/redux/store';
-import {setSearchValue} from '../../../../../Downloads/pizza-app-master/src/redux/filter/slice';
+import s from '../search/Search.module.scss';
+import {useAppDispatch} from '../../redux/store';
+import {setSearchValue} from '../../redux/filter/slice';
+
 
 export const Search: React.FC = () => {
     const dispatch = useAppDispatch()
@@ -29,9 +30,9 @@ export const Search: React.FC = () => {
     }
 
     return (
-        <div className={styles.root}>
+        <div className={s.root}>
             <svg
-                className={styles.icon}
+                className={s.icon}
                 height="24"
                 id="svg8"
                 version="1.1"
@@ -52,10 +53,10 @@ export const Search: React.FC = () => {
                 ref={inputRef}
                 value={value}
                 onChange={onChangeInput}
-                className={styles.input}
+                className={s.input}
                 placeholder={'Поиск пиццы...'}/>
             {value && (
-                <svg onClick={onClickClear} className={styles.clearIcon} height="512px"
+                <svg onClick={onClickClear} className={s.clearIcon} height="512px"
                      id="Layer_1"
                      version="1.1" viewBox="0 0 512 512" width="512px"
                      xmlns="http://www.w3.org/2000/svg"

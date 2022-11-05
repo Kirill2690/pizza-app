@@ -1,5 +1,5 @@
 import React from 'react';
-import cartEmptyImg from '../../../../../Downloads/pizza-app-master/src/assets/img/empty-cart.png'
+import cartEmptyImg from "../../../src/assets/img/empty-cart.png"
 import {Link} from 'react-router-dom';
 
 export const CartEmpty: React.FC = () => (

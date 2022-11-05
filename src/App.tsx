@@ -1,12 +1,13 @@
 import React, {Suspense} from 'react'
 import '../../../Downloads/pizza-app-master/src/scss/app.scss'
 import {Route, Routes} from 'react-router-dom';
-import {Home} from '../../../Downloads/pizza-app-master/src/pages/Home';
-import {MainLayout} from '../../../Downloads/pizza-app-master/src/layouts/MainLayout';
+import {MainLayout} from "./layouts/MainLayout";
+import {Home} from "./pages/Home";
 
-const Cart = React.lazy(() => import(/* webpackChunkName: "Cart" */ '../../../Downloads/pizza-app-master/src/pages/Cart'));
-const FullPizza = React.lazy(() => import(/* webpackChunkName: "FullPizza" */ '../../../Downloads/pizza-app-master/src/pages/FullPizza'));
-const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */ '../../../Downloads/pizza-app-master/src/pages/NotFound'));
+
+const Cart = React.lazy(() => import(/* webpackChunkName: "Cart" */ '../src/pages/Cart'));
+const FullPizza = React.lazy(() => import(/* webpackChunkName: "FullPizza" */ './pages/FullPizza'));
+const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */ './pages/NotFound'));
 
 const App = () => {
 

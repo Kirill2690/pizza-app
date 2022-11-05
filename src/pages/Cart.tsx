@@ -4,6 +4,8 @@ import {CartEmpty} from "../components/cart/CartEmpty";
 import {useAppDispatch, useAppSelector} from "../redux/store";
 import {selectCart} from "../redux/cart/selectors";
 import {clearItems} from "../redux/cart/slice";
+import {CartItem as CartItemType} from '../redux/cart/types';
+import {CartItem} from "../components/cart/CartItem";
 
 const Cart: React.FC = () => {
     const dispatch = useAppDispatch()

@@ -1,7 +1,9 @@
 import React from 'react'
-import {useAppDispatch} from '../../../../../Downloads/pizza-app-master/src/redux/store';
-import {setSort} from '../../../../../Downloads/pizza-app-master/src/redux/filter/slice';
-import {Sort as SortType, SortPropertyEnum} from '../../../../../Downloads/pizza-app-master/src/redux/filter/types';
+import {SortPropertyEnum} from "../../redux/filter/types";
+import {useAppDispatch} from "../../redux/store";
+import {setSort} from "../../redux/filter/slice";
+import {Sort as SortType} from '../../redux/filter/types';
+
 
 type SortItem = {
     name: string

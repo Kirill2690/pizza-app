@@ -1,9 +1,10 @@
 import React from 'react'
 import {Link, useLocation} from 'react-router-dom';
-import {Search} from '../../../../../Downloads/pizza-app-master/src/components/search';
-import {useAppSelector} from '../../../../../Downloads/pizza-app-master/src/redux/store';
-import {selectCart} from '../../../../../Downloads/pizza-app-master/src/redux/cart/selectors';
-import {CartItem} from '../../../../../Downloads/pizza-app-master/src/redux/cart/types';
+import {useAppSelector} from "../../redux/store";
+import {selectCart} from "../../redux/cart/selectors";
+import {CartItem} from "../../redux/cart/types";
+import {Search} from "../search/Search";
+
 
 export const Header = () => {
     const {items, totalPrice} = useAppSelector(selectCart)
@@ -27,12 +28,12 @@ export const Header = () => {
                     <div className="header__logo">
                         <img width="38" src={''} alt="Pizza logo"/>
                         <div>
-                            <h1>React Pizza</h1>
+                            <h1>Solo Pizza</h1>
                             <p>самая вкусная пицца во вселенной</p>
                         </div>
                     </div>
                 </Link>
-                {location.pathname !== '/cart' && <Search/>}
+               {/* {location.pathname !== '/cart' && <Search/>}*/}
                 <div className="header__cart">
                     {location.pathname !== '/cart' && (
                         <Link to="/cart" className="button button--cart">
