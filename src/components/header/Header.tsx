@@ -4,6 +4,8 @@ import {useAppSelector} from "../../redux/store";
 import {selectCart} from "../../redux/cart/selectors";
 import {CartItem} from "../../redux/cart/types";
 import {Search} from "../search/Search";
+import logoSvg from '../../assets/img/pizza-logo.svg'
+
 
 
 export const Header = () => {
@@ -26,14 +28,14 @@ export const Header = () => {
             <div className="container">
                 <Link to={'/'}>
                     <div className="header__logo">
-                        <img width="38" src={''} alt="Pizza logo"/>
+                            <img  width={34}  src={logoSvg} alt="Pizza logo"/>
                         <div>
                             <h1>Solo Pizza</h1>
-                            <p>самая вкусная пицца во вселенной</p>
+                            <p>лучшая пицца в вашем городе</p>
                         </div>
                     </div>
                 </Link>
-               {/* {location.pathname !== '/cart' && <Search/>}*/}
+                {location.pathname !== '/cart' && <Search/>}
                 <div className="header__cart">
                     {location.pathname !== '/cart' && (
                         <Link to="/cart" className="button button--cart">

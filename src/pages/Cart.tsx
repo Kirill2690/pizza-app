@@ -93,6 +93,7 @@ const Cart: React.FC = () => {
                         <div className="button pay-btn">
                             <span>Оплатить сейчас</span>
                         </div>
+                        <input placeholder={'Активировать промокод'}/>
                     </div>
                 </div>
             </div>

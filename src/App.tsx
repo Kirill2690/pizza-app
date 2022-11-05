@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react'
-import '../../../Downloads/pizza-app-master/src/scss/app.scss'
+import '../src/scss/app.scss'
 import {Route, Routes} from 'react-router-dom';
 import {MainLayout} from "./layouts/MainLayout";
 import {Home} from "./pages/Home";
